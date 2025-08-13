@@ -4,7 +4,7 @@
   "info": {
     "singularName": "hero",
     "pluralName": "heroes",
-    "displayName": "Hero"
+    "displayName": "HeroImage"
   },
   "options": {
     "draftAndPublish": true
@@ -14,11 +14,10 @@
     "bgimage": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
-        "files",
-        "videos",
-        "audios"
+        "files"
       ]
     },
     "title": {
@@ -44,6 +43,11 @@
     },
     "includeFooter": {
       "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     }
   }
 }

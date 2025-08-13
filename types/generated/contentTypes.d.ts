@@ -438,10 +438,80 @@ export interface ApiHeaderLogoHeaderLogo extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHeaderHeader extends Struct.CollectionTypeSchema {
+  collectionName: 'headers';
+  info: {
+    displayName: 'Header';
+    pluralName: 'headers';
+    singularName: 'header';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Item: Schema.Attribute.String;
+    ItemUrl: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::header.header'
+    > &
+      Schema.Attribute.Private;
+    Order: Schema.Attribute.Integer & Schema.Attribute.Unique;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHeroVideoHeroVideo extends Struct.CollectionTypeSchema {
+  collectionName: 'hero_videos';
+  info: {
+    displayName: 'HeroVideo';
+    pluralName: 'hero-videos';
+    singularName: 'hero-video';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bgvideo: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.Required;
+    buttonLink: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    enabled: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    includeFooter: Schema.Attribute.Boolean;
+    includeHeader: Schema.Attribute.Boolean;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hero-video.hero-video'
+    > &
+      Schema.Attribute.Private;
+    Notes: Schema.Attribute.String;
+    overlayPosition: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHeroHero extends Struct.CollectionTypeSchema {
   collectionName: 'heroes';
   info: {
-    displayName: 'Hero';
+    displayName: 'HeroImage';
     pluralName: 'heroes';
     singularName: 'hero';
   };
@@ -449,13 +519,17 @@ export interface ApiHeroHero extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    bgimage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    bgimage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     buttonLink: Schema.Attribute.String;
     buttonText: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.String;
+    enabled: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
     includeFooter: Schema.Attribute.Boolean;
     includeHeader: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1011,6 +1085,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::header-logo.header-logo': ApiHeaderLogoHeaderLogo;
+      'api::header.header': ApiHeaderHeader;
+      'api::hero-video.hero-video': ApiHeroVideoHeroVideo;
       'api::hero.hero': ApiHeroHero;
       'api::video.video': ApiVideoVideo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
