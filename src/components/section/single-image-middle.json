@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_section_single_image_middles",
+  "info": {
+    "displayName": "SingleImageMiddle"
+  },
+  "options": {},
+  "attributes": {
+    "text_block": {
+      "type": "component",
+      "component": "text-block.paragraph",
+      "repeatable": true
+    },
+    "section_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

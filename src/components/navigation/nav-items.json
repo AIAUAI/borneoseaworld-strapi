@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_navigation_nav_items",
+  "info": {
+    "displayName": "nav_items"
+  },
+  "options": {},
+  "attributes": {
+    "nav_item_name": {
+      "type": "string"
+    },
+    "nav_item_url": {
+      "type": "string"
+    },
+    "nav_item_is_external": {
+      "type": "boolean"
+    },
+    "nav_item_order": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

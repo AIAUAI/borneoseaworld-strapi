@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "project_updates",
+  "info": {
+    "singularName": "project-update",
+    "pluralName": "project-updates",
+    "displayName": "Project Update"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PageContent": {
+      "type": "dynamiczone",
+      "components": [
+        "slider.slider-standard",
+        "section.single-image-middle"
+      ]
+    }
+  }
+}

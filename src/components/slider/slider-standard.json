@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_slider_slider_standards",
+  "info": {
+    "displayName": "Slider_Standard"
+  },
+  "options": {},
+  "attributes": {
+    "slider_image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

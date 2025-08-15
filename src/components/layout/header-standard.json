@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_layout_header_standards",
+  "info": {
+    "displayName": "header_standard"
+  },
+  "options": {},
+  "attributes": {
+    "header_logo": {
+      "type": "component",
+      "component": "header.header-logo",
+      "repeatable": true
+    },
+    "nav_items": {
+      "type": "component",
+      "component": "navigation.nav-items",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
