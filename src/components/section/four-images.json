@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_section_four_images",
+  "info": {
+    "displayName": "FourImages"
+  },
+  "options": {},
+  "attributes": {
+    "section_order": {
+      "type": "integer"
+    },
+    "section_image_1": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "section_image_2": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "section_image_3": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "section_image_4": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "main_text_block": {
+      "type": "component",
+      "component": "text-block.paragraph",
+      "repeatable": false
+    },
+    "paragraph": {
+      "type": "component",
+      "component": "text-block.paragraph",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

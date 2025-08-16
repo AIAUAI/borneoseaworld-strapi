@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_events_event_cards",
+  "info": {
+    "displayName": "Event_Card"
+  },
+  "options": {},
+  "attributes": {
+    "event_name": {
+      "type": "string",
+      "required": true
+    },
+    "event_description": {
+      "type": "string"
+    },
+    "event_category": {
+      "type": "string"
+    },
+    "event_date": {
+      "type": "date"
+    },
+    "event_media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

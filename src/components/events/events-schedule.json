@@ -1,16 +1,16 @@
 {
-  "collectionName": "components_slider_slider_standards",
+  "collectionName": "components_events_events_schedules",
   "info": {
-    "displayName": "Slider_Standard"
+    "displayName": "Events_Schedule"
   },
   "options": {},
   "attributes": {
     "section_order": {
       "type": "integer"
     },
-    "slider_image_card": {
+    "event_card": {
       "type": "component",
-      "component": "slider.slider-image-card",
+      "component": "events.event-card",
       "repeatable": true
     }
   },

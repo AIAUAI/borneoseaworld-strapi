@@ -1,23 +1,17 @@
 {
-  "kind": "collectionType",
-  "collectionName": "hero_videos",
+  "collectionName": "components_hero_hero_images",
   "info": {
-    "singularName": "hero-video",
-    "pluralName": "hero-videos",
-    "displayName": "HeroVideo"
+    "displayName": "HeroImage"
   },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
-    "bgvideo": {
+    "bgimage": {
       "type": "media",
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "files",
-        "videos"
+        "images",
+        "files"
       ]
     },
     "title": {
@@ -26,7 +20,7 @@
     "description": {
       "type": "string"
     },
-    "Notes": {
+    "notes": {
       "type": "string"
     },
     "buttonText": {
@@ -38,16 +32,11 @@
     "overlayPosition": {
       "type": "string"
     },
-    "includeHeader": {
-      "type": "boolean"
-    },
-    "includeFooter": {
-      "type": "boolean"
-    },
     "enabled": {
       "type": "boolean",
       "required": true,
-      "default": false
+      "default": true
     }
-  }
+  },
+  "config": {}
 }

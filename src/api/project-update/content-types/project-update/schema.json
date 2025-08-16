@@ -15,7 +15,12 @@
       "type": "dynamiczone",
       "components": [
         "slider.slider-standard",
-        "section.single-image-middle"
+        "section.single-image-middle",
+        "section.single-image-left-right",
+        "events.events-schedule",
+        "section.two-images",
+        "section.three-images",
+        "section.four-images"
       ]
     }
   }

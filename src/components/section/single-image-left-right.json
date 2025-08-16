@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_section_single_image_middles",
+  "collectionName": "components_section_single_image_left_rights",
   "info": {
-    "displayName": "SingleImageMiddle"
+    "displayName": "SingleImageLeftRight"
   },
   "options": {},
   "attributes": {
@@ -23,6 +23,11 @@
       "type": "component",
       "component": "text-block.paragraph",
       "repeatable": true
+    },
+    "Position": {
+      "type": "string",
+      "default": "Left",
+      "required": true
     }
   },
   "config": {}

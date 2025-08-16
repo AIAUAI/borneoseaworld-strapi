@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_slider_slider_image_cards",
+  "info": {
+    "displayName": "Slider_Image_Card"
+  },
+  "options": {},
+  "attributes": {
+    "slider_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slider_image_link": {
+      "type": "string"
+    },
+    "slider_image_alt_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

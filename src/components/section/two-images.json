@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_section_two_images",
+  "info": {
+    "displayName": "TwoImages"
+  },
+  "options": {},
+  "attributes": {
+    "section_order": {
+      "type": "integer"
+    },
+    "section_image_1": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "section_image_2": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "main_text_block": {
+      "type": "component",
+      "component": "text-block.paragraph",
+      "repeatable": false
+    },
+    "text_block_1": {
+      "type": "component",
+      "component": "text-block.paragraph",
+      "repeatable": false
+    },
+    "text_block_2": {
+      "type": "component",
+      "component": "text-block.paragraph",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

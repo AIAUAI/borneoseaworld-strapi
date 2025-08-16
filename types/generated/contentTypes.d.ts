@@ -439,77 +439,26 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiHeroVideoHeroVideo extends Struct.CollectionTypeSchema {
-  collectionName: 'hero_videos';
+export interface ApiHomeHome extends Struct.SingleTypeSchema {
+  collectionName: 'homes';
   info: {
-    displayName: 'HeroVideo';
-    pluralName: 'hero-videos';
-    singularName: 'hero-video';
+    displayName: 'Home';
+    pluralName: 'homes';
+    singularName: 'home';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    bgvideo: Schema.Attribute.Media<'files' | 'videos'> &
-      Schema.Attribute.Required;
-    buttonLink: Schema.Attribute.String;
-    buttonText: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String;
-    enabled: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
-    includeFooter: Schema.Attribute.Boolean;
-    includeHeader: Schema.Attribute.Boolean;
+    hero_image: Schema.Attribute.Component<'hero.hero-image', false>;
+    hero_video: Schema.Attribute.Component<'hero.hero-video', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::hero-video.hero-video'
-    > &
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
-    Notes: Schema.Attribute.String;
-    overlayPosition: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiHeroHero extends Struct.CollectionTypeSchema {
-  collectionName: 'heroes';
-  info: {
-    displayName: 'HeroImage';
-    pluralName: 'heroes';
-    singularName: 'hero';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    bgimage: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
-    buttonLink: Schema.Attribute.String;
-    buttonText: Schema.Attribute.String;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.String;
-    enabled: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<true>;
-    includeFooter: Schema.Attribute.Boolean;
-    includeHeader: Schema.Attribute.Boolean;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::hero.hero'> &
-      Schema.Attribute.Private;
-    Notes: Schema.Attribute.String;
-    overlayPosition: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -537,7 +486,15 @@ export interface ApiProjectUpdateProjectUpdate extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     PageContent: Schema.Attribute.DynamicZone<
-      ['slider.slider-standard', 'section.single-image-middle']
+      [
+        'slider.slider-standard',
+        'section.single-image-middle',
+        'section.single-image-left-right',
+        'events.events-schedule',
+        'section.two-images',
+        'section.three-images',
+        'section.four-images',
+      ]
     >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -1086,8 +1043,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::global.global': ApiGlobalGlobal;
-      'api::hero-video.hero-video': ApiHeroVideoHeroVideo;
-      'api::hero.hero': ApiHeroHero;
+      'api::home.home': ApiHomeHome;
       'api::project-update.project-update': ApiProjectUpdateProjectUpdate;
       'api::video.video': ApiVideoVideo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
